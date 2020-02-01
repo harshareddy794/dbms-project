@@ -1,0 +1,5 @@
+password:kamal
+
+admin : root@sbu.com
+hod : ithod@sbu.com
+

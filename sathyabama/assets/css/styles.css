@@ -1,0 +1,97 @@
+#login-panel .panel-footer
+{
+    font-weight:normal;
+}
+
+.navbar-brand
+{
+    font-size:20px;
+}
+
+body
+{
+    background:rgb(215,240,200);
+}
+
+.header
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    background: rgb(30,20,100);
+    color:  rgb(140,200,250);
+    font-size: 20px;
+}
+
+a
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#banner_image
+{
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/intro-bg_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.big-checkbox
+{
+    width: 30px; height: 30px;
+}
+
+.big-checkbox1
+{
+    width: 20px; height: 20px;
+}
+
+.img-teeth
+{
+    width: 45px;
+    height: 120px;
+
+}
+
+.img-teeth1
+{
+    width: 52px;
+    height: 108px;
+}
+
+label
+{
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.radio
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+footer
+{
+    padding: 10px 0;
+    background-color: rgb(30,20,100);
+    color:  rgb(140,200,250);
+    bottom: 0;
+    width: 100%;
+}
+
+.form-check-input , .form-check-label
+{
+   font-size: medium;
+}
+
+.label-column,.input-column
+{
+    font-size: large;
+}

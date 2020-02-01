@@ -1,0 +1,76 @@
+<?php
+  include('includes/functions.php');
+
+  if (!isStudent())
+  {
+    echo'<script>alert("You must log in first");</script>';
+	header('location: login.php');
+  }
+
+?>
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Registration Form</title>
+<body style="background-color:DarkOliveGreen;">
+
+<style>
+input,textarea{width:200px}
+input[type=radio],input[type=checkbox]{width:10px}
+input[type=submit],input[type=reset]{width:100px}
+</style>
+</head>
+
+<body><center>
+<h2>Register Form</h2>
+<form method="post" action="reg.php" enctype="multipart/form-data">
+<table width="393" border="1">
+ <tr>
+ 	<td colspan="2"><?php echo @$msg; ?></td>
+ </tr>
+  <tr>
+    <td width="159">Enter your Name</td>
+    <td width="218">
+	<input type="text" placeholder="your name"  name="n" pattern="[a-z A-Z]*" required /></td>
+  </tr>
+  <tr>
+    <td>Enter your Department</td>
+     <td><input type="text" placeholder="department" name="e"/></td>
+  </tr>
+  <tr>
+    <td>Enter your Section</td>
+    <td><input type="text" placeholder="Section" name="p"/></td>
+  </tr>
+  <tr>
+    <td>Enter your Register No</td>
+    <td><textarea type="number" placeholder="Register No" name="r"></textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+	<input type="submit" name="save" value="Enter"/>
+	</td>
+  </tr>
+</table>
+</form>
+</center>
+<?php
+$a=$_REQUEST['n'];
+$b=$_REQUEST['e'];
+$c=$_REQUEST['p'];
+$d=$_REQUEST['r'];
+$query="INSERT INTO studentdetails values('$a','$b','$c','$d')";
+$qurey_run=mysqli_query($con,$query);
+if($qurey_run)
+{
+echo '<script>alert("Registered")</script>';
+}
+else
+{
+echo 'error';
+}
+//$msg= "<font color='blue'>Your data saved</font>";
+$con->close();
+?>
+</body>
+</html>
